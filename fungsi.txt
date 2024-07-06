@@ -1,0 +1,37 @@
+Fungsi adalah : 
+program kecil yang berada didalam program utama yang mengembalikan nilai
+
+format penulisan fungsi
+FUNCTION namaFungsi(param1, param2 ...) : type
+	jika params tidak ada maka dihilangkan
+DEKLARASI
+{ dekalarasi variable fungsi }
+ALGORITMA
+{ penulisan kode inti fungsi }
+return ekspresi
+
+
+contoh fungsi
+
+PROGRAM ProgramHitungLuas
+DEKLARASI
+z = int
+	FUNCTION hitungLuasLingkaran(r:int)
+	DEKLARASI
+	L = int
+	const phi = 3.14
+	ALGORITMA
+	L = r * r * phi
+	
+	return ('luas lingkaran : ' + L)
+
+ALGORITMA
+read z
+write ("Luas lingkaran adalah :" hitungLuasLingkaran(z)
+
+
+variable global dan variable local untuk efisiensi penulisan
+
+1. variable global bisa diakses dari manapun termasuk didalam
+	fungsi maupun procedure
+2. variable local hanya bisa diakses/digunakan didalam fungsi/procedure

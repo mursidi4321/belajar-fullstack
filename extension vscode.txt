@@ -1,0 +1,7 @@
+1. Material icon theme
+2. live server untuk edit html
+3. untuk coding php
+	php DocBlocker
+	php intelephense
+4. untuk js
+	javascript(es6) code snippets

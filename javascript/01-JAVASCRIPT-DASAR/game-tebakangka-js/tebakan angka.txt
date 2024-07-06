@@ -1,0 +1,15 @@
+PROGRAM tebakAngka
+
+variable
+Angka constan dari math random = tebakAngka
+tabakan angka dari inputan = guest
+
+1. mulai
+2. masukkan angka guest
+3. jika angka input tidak sama tebak angka
+    masukkan inputan lagi....
+    jika angka input lebih besar tebakAngka,
+    angka guest supaya lebih kecil
+    sebaliknya
+
+4. selesai

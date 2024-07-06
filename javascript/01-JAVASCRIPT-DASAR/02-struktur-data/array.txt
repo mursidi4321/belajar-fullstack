@@ -1,0 +1,22 @@
+method yang dimiliki array
+
+1. push - menambah item pada akhir array
+2. pop - menghapus item pada akhir array
+3. shif - menghapus item pada paling awal array
+4. unshif - menambah item pada array awal
+
+method array yang sering digunakan
+
+1. concat - menggabungkan array
+2. includes - mencari suatu nilai didalam array\
+3. indexOf - sama kaya indexOf di string
+4. join - membuat suatu string di dalam array
+5. reverse - membalikan urutan isi array
+6. slice - menyalin sebagian dari isi array
+7. splice - menghapus atau mengubah element array
+8. sort - mengurutkan nilai pada array
+
+
+array multidimensi / nested array
+array di dalam array
+

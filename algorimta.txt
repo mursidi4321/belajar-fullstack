@@ -1,0 +1,88 @@
+1. Bagian judul - PROGRAM
+2. Bagian deklarasi
+	digunakan untuk variabel2 yang akan digunakan dalam 
+	algoritma
+3. bagian isi
+
+
+contoh penulisan pseudocode
+Pseudocode untuk menghitung luas persegipanjang
+
+PROGRAM CariLuasPersegiPanjang
+
+DEKLARASI
+int p, l
+float hasil
+
+ALGORITMA
+read (p, l)
+hasil = p * l
+write ("Luas Persegi Panjang : ", hasil)
+
+
+
+PROGRAM AlogoritmaBeliSepatuAdidasAbdul
+DEKLARASI
+budget : int <= 1000000
+hargaSepatuAdidasRytem : int 1200000
+hargaSepatuAdidasClear : int, 900000
+
+ALGORITMA
+pergi ke Toko AdidasStore()
+if(budget <= 1000000) then
+	beliAdidasClear()
+else beliAdidasRytem
+
+
+PROGRAM CetakNilai
+nilai 90 keatas nilai A
+nilai 70-80 cetak nilai B
+nilai 60 - 70 cetak nilai C
+dibawah 50 cetak nilai D
+
+ALGORITMA
+if nilai > 80 then
+	cetak A
+if nilai > 70 then
+	cetak B
+if nilai > 60 then
+	cetak C
+else 
+	cetak D
+
+
+algoritman programPembuatan Kopi
+
+PROGRAM PembuatanKopi
+DEKLARASI
+jmlAduk < 10
+i <- 1
+
+ALGORITMA
+siapkanBahan()
+campurKopiGulaDanAirPanas()
+while i <= jumlahAduk do
+	aduk()
+i <- i+1
+endWhile
+kopiHidangkan()
+
+
+PROGRAM CetakBanyak
+i = int
+while i< 100 do
+writeLn('Cetak nama())
+i <= i++ 
+end while
+
+
+repeat statment until kondisi
+PROGRAM cetakBanyakPakaiRepeat
+
+i < 0
+repeat
+	cetakNama()
+	i < i++
+until i = 100
+
+	

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir isian</title>
+</head>
+<body>
+    <h1>Formulir Isian</h1>
+    <div>
+        <form action="/login" method="post">
+            <div>
+                <label for="name">Nama lengkap</label>
+                <input type="text" placeholder="fullname" id="name" name="name">
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" placeholder="Email" id="email" name="email">
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" placeholder="Your password" id="password" name="password">
+            </div>
+            <div>
+                <label for="phone">No Telp</label>
+                <input type="number" placeholder="Number phone" id="phone" name="password">
+            </div>
+        
+            <button type="submit">Kirim</button>
+
+        </form>
+    </div>
+    <br>
+    <hr>
+
+    <!-- memakai tabel -->
+
+    <form action="" method="post">
+        <table>
+            <tr>
+                <td><label for="name">Nama lengkap</label></td>
+                <td>:</td>
+                <td><input type="text" placeholder="fullname" id="name"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td>:</td>
+                <td><input type="email" placeholder="Email" id="email"></td>
+            </tr>
+            <tr>
+                <td> <label for="password">Password</label></td>
+                <td>:</td>
+                <td><input type="password" placeholder="Your password" id="password"></td>
+            </tr>
+            <tr>
+                <td><label for="phone">No Telp</label></td>
+                <td>:</td>
+                <td><input type="number" placeholder="Number phone" id="phone"></td>
+            </tr>
+            <tr>
+                <td><label for="">Color</label></td>
+                <td>:</td>
+                <td><input type="color"></td>
+            </tr>
+        </table>
+    </form>
+
+
+    <hr>
+    <h1>Pesanan Baju</h1>
+    <form action="/order">
+        <div>
+            <label for="">Ukuran</label>
+            <input type="radio" name="size" id="" value="XL" checked> <label for="">XL</label>
+            <input type="radio" name="size" id="" value="SM"> <label for="">SM</label>
+        </div>
+        <div>
+            <select name="bayar" id="">
+                <option value="cash"  selected>Cash</option>
+                <option value="cod">COD</option>
+            </select>
+        </div>
+        <div>
+            <label for="term">Setuju pesanan</label>
+            <input type="checkbox" name="term" value="benar" id="term" checked>
+        </div>
+       <div>
+            <p>
+                <label for="notes">Catatan</label>
+            </p>
+            <textarea name="notes" id="notes" cols="60" rows="6"></textarea>
+        </div>
+
+        <button type="submit">Order</button>
+    </form>
+</body>
+</html>

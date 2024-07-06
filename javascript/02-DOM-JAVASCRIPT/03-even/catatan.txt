@@ -1,0 +1,39 @@
+CONTOH BEBERAPA EVEN PADA DOM
+
+click
+drag
+drop
+hover
+scroll
+form submission
+key press
+focus/blur
+mouse wheel
+double click
+copy
+paste
+audio
+screen resize
+print
+
+
+// INLINE EVENT
+<button onclick="alert('telah diclik')">Click Me</button>
+
+
+// MENEJALANKAN EVENT MELALUI DOM
+const button = document.querySelector('#clickMe');
+
+button.onclick = function(){ // functin biasa
+    console.log('Clik Me')
+}
+
+button.onmouseover = () => { // function expression
+    console.log('dont touch me')
+}
+
+const scream = () => {
+    console.log('Double clicks')
+}
+
+button.ondblclick = scream;

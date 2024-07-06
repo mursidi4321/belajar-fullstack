@@ -1,0 +1,39 @@
+prosedure adalah sub program / program kecil
+didalam program utama
+
+Format penulisan procedure
+
+PROCEDUR namaProcedure(param1, param2,param3...)
+jika procedure tidan memilik param maka isi param dalam kurung dihilangkan
+DEKLARASI
+{ deklarasi variabel producedure } 
+ALGORITMA
+{ penulisan kode inti procedure }
+
+
+parameter adalah masukan untuk sub program
+yang nantinya akan diproses lebih lanjut didalam procedure
+1. Parameter aktual :
+	parameter yang dipakai ketika sebuah procedure atau fungsi dipanggil
+	didalam program
+2. Parameter formal
+	parameter yang berupa variabel yang berada dalam function atau procedure
+	saat dideklarasikan
+
+contoh :
+PROGRAM ProgramUtamaHitungLuas
+DEKLARASi
+z : integer
+
+	PROCEDURE hitungLuasLingkaran(r:integer)
+	DEKLARASI
+	L : real
+	const phi = 3.14
+	ALGORITMA
+	L = r * r * phi
+	write("luas lingkaran adalah: "  + L)
+
+ALGORITMA
+read(z)
+HitungLuasLingkaran(z)
+

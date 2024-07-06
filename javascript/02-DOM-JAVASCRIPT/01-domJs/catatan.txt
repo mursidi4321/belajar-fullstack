@@ -1,0 +1,117 @@
+Select elementt :
+
+1. Document.getElementById
+2. Document.getElementsByTagName;
+3. Document.getElementsByClassName;
+
+4. document.querySelector('#');
+5. document.querySelectorAll();
+
+
+Manipulate:
+properties dan method yang sering digunakan
+
+classList
+getAttribute() // mengambil attribute misal alt,src,class
+setAttribute() // menambah attribute
+appendChild()
+append()
+prepend()
+removeChild()
+remove()
+createElement
+
+innerText // teksnya saja
+textContent // text seperti yang ada di vscode
+innerHTML // termasuk format html
+value
+parentElement
+children
+nextSibling
+previousSibling
+style // merubah -menambah style
+
+
+// MEMANFAAT CLASSLIST
+const h1 = document.querySelector('h1'); // select element h1
+
+h1.setAttribute('class', 'bg-info'); // menambah attribue class bg-info
+h1.setAttribute('class', 'border-danger') // menumpuki/replace class dengan border-danger
+
+h1.classList.remove('border-danger')// menghapus isi class border-dangaer
+h1.classList.add('bg-info') // menambahi isi class bg-info
+h1.classList.add('border-danger') // menambahi isi class border-danger
+
+h1.classList.contains('bg-info') // cek apa h1 classnya punya bg-info
+if(h1.classList.contains('border-danger')){
+	h1.classList.remove('bg-info');	
+} else 
+
+
+
+// ELEMENT PARENT, CHILD, SIBLING
+const b = document.querySelector('b'); // seleksi elemen b - bold
+
+const parenElementB = b.parentElement // orangtua element b yaitgu p
+console.log(parenElementB); 
+const mbaheElementB = b.parentElement.parentElement // mbahe element b adalah body
+console.log(mbaheElementB);
+
+const toc = document.querySelector('#toc'); // select dengan div dengan id toc
+console.log(toc);
+
+const content = document.querySelector('#mw-toc-heading')
+console.log(content);
+content.innerHTML = 'KONTENT';
+const bapakeContent = content.parentElement;
+console.log(bapakeContent);
+
+const anakContent = content.children;
+console.log(anakContent);
+
+// NEXTSIBLING DAN NEXT  ELEMENT SIBLING
+// PREVIOUS SIBLING DAN PREVIOUS ELEMENT SIBLING
+const square = document.querySelector('.square'); // select image clas square
+console.log(square);
+
+const preElement = square.previousElementSibling; // element sebelumnya yaitu p -paragraf
+console.log(preElement);
+
+const squareImg = square.getAttribute('src');
+console.log(squareImg);
+
+
+
+//APPEND - APPENDCHILD
+const img = document.querySelector('img'); // select img
+const src = img.getAttribute('src'); // ambil srcnya
+
+const newImage = document.createElement('img') // buat element baru img
+const body = document.body; // select element parent
+newImage.classList.add('square'); // tambah class di img baru
+newImage.setAttribute('src', src) // tambah atribut src
+body.append(newImage); // tambahkan di element parent
+
+
+// BEDANGYA APPEND DAN APPENCHILD
+// KALAU APPEND YANG DITAMBAHKAN DOC HTML
+const paragraf = document.querySelector('p');
+paragraf.append(' </b> Ini Bold </b>');
+
+const h1 = document.querySelector('h1');
+
+const h2 = document.createElement('h2');
+h2.innerHTML = 'Buaya';
+h2.style.color ='red';
+h1.appendChild(h2);
+
+
+
+// MEMAHAMI REMOVE DAN REMOVECHILD
+const firstLi = document.querySelector('li'); // select li ke1
+
+const parentLi = firstLi.parentElement; // mencari parentnya li
+parentLi.removeChild(firstLi); // menghapus li ke 1 // untuk browser versi lama
+
+const img = document.querySelector('img'); // salect img
+img.remove(); // menghilangkan img
