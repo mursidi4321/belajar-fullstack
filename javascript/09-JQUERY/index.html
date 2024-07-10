@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar jQuery</title>
+</head>
+<body>
+
+    <h1>Belajar JQuery</h1>
+
+    <ul id="destinations">
+        <li class="bandung">Bandung</li>
+        <li>Jakarta</li>
+            <ul>
+                <li>Jakarta Pusat</li>
+                <li >Jakarta Utara</li>
+                <li>Jakarta Selatan</li>
+                <li class="jakartTimur"><strong>Jakarta Barat</strong></li>
+                <li>Jakarta Timur</li>
+                <li class="promo">Kota Solo
+                    <ol>
+                        <li>Banjarsari</li>
+                        <li>Laweyan</li>
+                    </ol>
+                </li>
+            </ul>
+        <li>Surabaya</li>
+        <li>Bali</li>
+    </ul>
+
+    <ul id="vacation">
+        <li class="vacation">
+            <h2>Hawain vacation...</h2>
+            <button>Get Free</button>
+        </li>
+    </ul>
+    <span id="special">Disini selain promo juga id yang diperlukan</span>
+<div style="text-align: center;">
+    <button id="allBtn">All li</button>
+    <button id="childBtn">Only child LI</button>
+    <button id="promoBtn">Promo and ID</button>
+    <button id="pilihBtn">Choose First $ Last</button>
+
+</div>
+
+<h1>Kemana kamu akan pergi ?</h1>
+    <ul>
+        <li class="bandung">Bandung
+            <button id="bandung">Bandung</button>
+            <button id="hapusBandung">x</button>
+        </li>
+        <li>Surabaya</li>
+        <li>Jakarta</li>
+    </ul>
+    <button id="toggleBandung">Toggle Bandung</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#allBtn').on('click', function(){
+                $("#destinations li").css("background-color", "yellow");
+            })
+            $('#childBtn').on('click', function(){
+                $('#destinations > li').css('background-color', 'blue')
+            })
+            $('#promoBtn').on('click', function(){
+               $(".promo, #special").css('color', 'red');
+            })
+            $('#pilihBtn').on('click', function(){
+                $("#destinations li:first").css('color', 'green')
+                $("#destinations li:last").css('color', 'red')
+            })
+
+            var price = '<p>IDR 34.000</p>'
+            $('.vacation').before(price)
+            $('.vacation').after(price)
+
+            console.log($('.jakartTimur').text())
+
+            console.log($('.jakartTimur').html())
+
+            $('#bandung').on('click', function(){
+                alert('Saya suka bandung')
+            })
+            $('#hapusBandung').on('click', function(){
+                $('.bandung').remove();
+                alert('Bandung ilang deh...')
+            })
+
+            $('#toggleBandung').on('click', function(){
+               $('.bandung').animate({marginLeft: 30})
+
+            })
+           
+        })
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>

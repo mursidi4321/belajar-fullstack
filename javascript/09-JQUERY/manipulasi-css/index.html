@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulasi jQuery  CSS</title>
+    <style>
+      .merah {
+        color: red;
+      }
+      .biru {
+        color: blue;
+      }
+
+    </style>
+</head>
+<body>
+    <h1>Mau pergi kemana ?</h1>
+    <ul>
+        <li class="bandung">Bandung</li>
+        <li class="jakarta">Jakarta</li>
+        <li>Bali</li>
+    </ul>
+    <button id="biruBtn">Biru</button>
+    <button id="merahBtn">Merah</button>
+    <button id="besarBtn">Besar</button>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#biruBtn').on('click', function(){
+                $('.bandung').removeClass('merah');
+                $('.bandung').addClass('biru');
+            })
+            $('#merahBtn').on('click', function(){
+                $('.bandung').removeClass('biru');
+                $('.bandung').addClass('merah');
+            })
+            
+            $('#besarBtn').on('click', function(){
+                $('.bandung').animate({fontSize:100});
+                $('.jakarta').css({fontSize:50})
+            })
+
+        })
+    </script>
+</body>
+</html>

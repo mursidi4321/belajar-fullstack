@@ -1,0 +1,187 @@
+// SELECTOR PADA jquery
+CSS                     jquery
+P {...}                 $('p')
+.container {...}        $('.container')
+#article {...}          $('#article)
+
+Contoh :
+<h1>Where do want to go?</h1>
+<h2>Travel Destinations</h2>
+<p>Plan your next adventure</p>
+<p>Rome, Paris or Rio?</p>
+<button>Aksi</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function()
+{
+  $("button").click(function()
+  {
+    $("p").hide();// seluruh p akan disembunyikan
+    $('p').tex('Surabaya') // seluruh isi p akan diganti text Surabaya
+  });
+});
+</script>
+
+// SELECTOR jquery DENGAN PSUODOCLASS
+$("#destinations li").css("background-color", "yellow");
+// mencari element child - anaknya saja
+$('$destinations>li).css('background-color', 'blue');
+// mencari lebih dari satu element
+$(".promo, #special").css('color', 'red');
+// Memilih element pertama dan terakhir
+$("#destinations li:first");
+$("#destinations li:last");
+// Memilih element ganjil - genap
+$("#destinations li:odd");
+$("#destinations li:even");
+
+// MENGGUNAKAN FUNGSI TRAVERSING
+Digunakan untuk menjelajah DOM dengan menggunakan fungsi-fungi berikut ini :
+
+.first()
+
+Memilih elemen pertama dari elemen yang dipilih
+
+.last()
+
+Memilih elemen terakhir dari elemen yang dipilih
+
+.prev()
+
+Memilih elemen sebelumnya dari elemen yang dipilih
+
+.next()
+
+Memilih elemen berikutnya dari elemen yang dipilih
+
+.children()
+
+Memilih elemen anak dari elemen yang dipilih
+
+.find()
+
+Memilih elemen anak dan juga elemen-elemen di bawahnya dari elemen yang dipilih
+
+.parent()
+
+Memilih elemen parent dari elemen yang dipilih
+
+CONTOH :
+$("li").first().next().prev().last();
+
+
+Add
+Ada beberapa pilihan untuk manipulasi dengan fungsi add antara lain :
+
+.before(<elemen>)
+Digunakan untuk menyisipkan konten tertentu sebelum elemen yang dipilih.
+$(document).ready(function(){
+var price = $('<p>From $399.99</p>');    
+ $('.vacation').before(price);
+});
+
+.after(<elemen>)
+Digunakan untuk menyisipkan konten tertentu setelah elemen yang dipilih.
+$(document).ready(function(){
+var price = $('<p>From $399.99</p>');    
+ $('.vacation').after(price);
+});
+
+.append(<elemen>)
+Digunakan untuk menyisipkan konten tertentu di dalam elemen yang dipilih dan diletakkan di bagian akhir.
+$(document).ready(function(){
+var price = $('<p>From $399.99</p>');    
+ $('.vacation').append(price);
+});
+
+.prepend(<elemen>)
+Digunakan untuk menyisipkan konten tertentu di dalam elemen yang dipilih dan diletakkan di awal.
+$(document).ready(function(){
+var price = $('<p>From $399.99</p>');    
+ $('.vacation').prepend(price);
+});
+
+Alternatif
+Fungsinya sama seperi add hanya saja susunan pemakainnya berbeda.
+
+.insertBefore(<elemen>)
+Fungsinya sama seperti before, digunakan untuk menyisipkan konten / elemen HTML sebelum elemen yang dipilih.
+price.insertBefore($('.vacation'));
+
+.prependTo(<elemen>)
+Fungsinya sama seperti prepend, digunakan untuk menyisipkan elemen HTML di awal elemen yang dipilih.
+price.prependTo($('.vacation'));
+
+.appendTo(<elemen>)
+Fungsinya sama seperti append, digunakan untuk menyisipkan elemen HTML di akhir elemen yang dipilih.
+price.appendTo($('.vacation'));
+
+
+
+GET
+Digunakan untuk mengambil data elemen di jQuery.
+
+.text
+Mengembalikan konten teks dari elemen yang dipilih. Metode ini mengembalikan semua elemen yang cocok dan menghapus markup HTML.
+console.log($('.jakartaTimur').text())
+
+.html
+Mengembalikan konten elemen yang dipilih (termasuk markup HTML).
+console.log($('.jakartaTimur').html())
+
+.val
+Mengembalikan value pada form.
+console.log($('.inputan').val());
+
+SET
+.text(konten)
+Mengatur konten teks dari elemen yang dipilih.
+  $('.bandung').text('Cimahi');   
+
+.html(konten)
+Mengatur konten elemen yang dipilih (markup HTML).
+$('.surabaya').html('<em>Surabaya</em>');
+
+.val(konten)
+Menetapkan atau mengembalikan value pada form.
+$('.inputan').val('Semarang');
+
+
+Remove
+Digunakan untuk mengambil data di jQuery.
+
+.remove()
+Menghapus elemen dan elemen didalamnya (child)
+$('.bandung').remove();
+
+.empty()
+Menghapus elemen di dalamnya saja (child)
+$('.surabaya').empty();
+
+
+EVENT HANDLER DI JAVASCRIP DAN JQUERY
+
+Mouse Event:
+mouseleave - mouseenter - mouseover - click - dbclick
+
+Keyboard event :
+keypress - keyup - keydown
+
+form event :
+submit - change - focus -blur
+
+Document / Window event :
+load - resize - scroll - unload
+
+
+// FITUR EFECT DI JQUERY
+// Tanpa animasi
+hide(kecepatan) - show(kecepatan) - toggle(kecepatan)
+Animasi Slide
+sldeDown(kecepatan) - slideUp(kecepatan) - slideToggle(kecepatan)
+
+Animasi Fade
+fadeIn(kecepatan) - fadeOut(kecepatan) - fadeToggle(kecepatan) - fadeTo(kecepatan transparansi)
+Animasi via css
+animate(parameter css, kecepatan)
+
